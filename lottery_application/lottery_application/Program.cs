@@ -35,6 +35,9 @@ class Lottery
             randomNumber[i] = rnd.Next(1, 99);
         }
         
+        Array.Sort(randomNumber);
+        Array.Sort(chosen_numbers);
+
         Console.WriteLine("...And here are the winning numbers: ");
         foreach (int num in randomNumber)
         {
