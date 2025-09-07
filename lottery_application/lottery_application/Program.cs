@@ -52,7 +52,7 @@ class Lottery
 
         for (int i = 0; i < size; i++)
         {
-            random_numbers[i] = rnd.Next(1, 99);
+            random_numbers[i] = rnd.Next(1, 100);
         }
 
         Array.Sort(random_numbers);
