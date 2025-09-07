@@ -3,7 +3,7 @@
 class Lottery
 {
     static void Main()
-    // This is the array to hold  a random number of chosen integers between 1 and 10 by the player
+    // This is the array to hold a random number of chosen integers between 1 and 10 by the player
     {   
         Random rnd = new Random();
         int rangeMin = rnd.Next(1, 50);
@@ -50,11 +50,18 @@ class Lottery
         }
 
         // Generates random winning numbers between rangeMin value and rangeMax value
+        HashSet<int> uniqueNumbers = new HashSet<int>();
         int[] random_numbers = new int[size];
+        int i = 0;
 
-        for (int i = 0; i < size; i++)
+        while (i < size)
         {
-            random_numbers[i] = rnd.Next(rangeMin, rangeMax);
+            int rand = rnd.Next(rangeMin, rangeMax + 1); // +1 to make rangeMax inclusive
+            if (uniqueNumbers.Add(rand)) // Add returns false if rand already exists
+            {
+                random_numbers[i] = rand;
+                i++;
+            }
         }
 
         Array.Sort(random_numbers);
