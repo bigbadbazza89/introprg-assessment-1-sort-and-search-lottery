@@ -52,15 +52,15 @@ class Lottery
         // Generates random winning numbers between rangeMin value and rangeMax value
         HashSet<int> uniqueNumbers = new HashSet<int>();
         int[] random_numbers = new int[size];
-        int i = 0;
+        int j = 0;
 
-        while (i < size)
+        while (j < size)
         {
             int rand = rnd.Next(rangeMin, rangeMax + 1); // +1 to make rangeMax inclusive
             if (uniqueNumbers.Add(rand)) // Add returns false if rand already exists
             {
-                random_numbers[i] = rand;
-                i++;
+                random_numbers[j] = rand;
+                j++;
             }
         }
 
@@ -77,17 +77,31 @@ class Lottery
         // Checks to see if the player has any matches using linear search
         Console.WriteLine("\n\nChecking to see if you have any matches...");
         bool found_match = false;
+        int matchCount = 0;
 
         foreach (int num in chosen_numbers)
         {
             int index = LinearSearch(random_numbers, num);
             if (index != -1)
             {
-                Console.WriteLine($"{num} is a winner! You win the prize!");
+                Console.WriteLine($"{num} is a winner!");
                 found_match = true;
+                matchCount++;
             }
         }
 
+        if (matchCount == 1)
+        {
+            Console.WriteLine($"\nYou matched {matchCount} numbers! You win 50 bazcoin!");
+        }
+        if (matchCount == 2)
+        {
+            Console.WriteLine($"\nYou matched {matchCount} numbers! You win 500 bazcoin!");
+        }
+        if (matchCount >= 3)
+        {
+            Console.WriteLine($"\nYou matched {matchCount} numbers! You win 50000 bazcoin!");
+        }
         if (!found_match)
         {
             Console.WriteLine("Unlucky mate. Better luck next time");
