@@ -6,20 +6,22 @@ class Lottery
     // This is the array to hold  a random number of chosen integers between 1 and 10 by the player
     {   
         Random rnd = new Random();
+        int rangeMin = rnd.Next(1, 50);
+        int rangeMax = rnd.Next(rangeMin + 1, 100);
         int size = rnd.Next(1, 11);
         int[] chosen_numbers = new int[size];
         int count = 0;
 
         // Welcomes and asks for the lotto numbers from the player
         Console.WriteLine("Welcome to Big Bad Bazzas Lottery Bonanza!");
-        Console.WriteLine($"Please submit {size} numbers between 1 and 99");
+        Console.WriteLine($"Please submit {size} numbers between {rangeMin} and {rangeMax}");
 
         // This loop will continue until the player has entered the integer value amount for chosen_numbers as valid numbers
         while (count < size)
         {
             Console.Write($"Enter number {count + 1}: ");
             string userInput = Console.ReadLine();
-            if (int.TryParse(userInput, out int number) && number >= 1 && number <= 99)
+            if (int.TryParse(userInput, out int number) && number >= rangeMin && number <= rangeMax)
             {
                 bool alreadyChosen = false;
                 for (int i = 0; i < count; i++)
@@ -43,16 +45,16 @@ class Lottery
             }
             else
             {
-                Console.WriteLine("Invalid input. Please enter a number between 1 and 99.");
+                Console.WriteLine($"Invalid input. Please enter a number between {rangeMin} and {rangeMax}.");
             }
         }
 
-        // Generates random winning numbers between 1 and 99
+        // Generates random winning numbers between rangeMin value and rangeMax value
         int[] random_numbers = new int[size];
 
         for (int i = 0; i < size; i++)
         {
-            random_numbers[i] = rnd.Next(1, 100);
+            random_numbers[i] = rnd.Next(rangeMin, rangeMax);
         }
 
         Array.Sort(random_numbers);
