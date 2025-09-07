@@ -3,7 +3,7 @@
 class Lottery
 {
     static void Main()
-        // This is the array to hold 5 chosen integers by the player
+    // This is the array to hold 5 chosen integers by the player
     {
         int[] chosen_numbers = new int[5];
         int count = 0;
@@ -34,7 +34,7 @@ class Lottery
         {
             random_numbers[i] = rnd.Next(1, 99);
         }
-        
+
         Array.Sort(random_numbers);
         Array.Sort(chosen_numbers);
 
@@ -55,14 +55,32 @@ class Lottery
                 Console.WriteLine($"{num} is a winner! You win the prize!");
                 found_match = true;
             }
+        }
 
-            if (!found_match)
-            {
-                Console.WriteLine("Unlucky mate. Better luck next time");
-            }
+        if (!found_match)
+        {
+            Console.WriteLine("Unlucky mate. Better luck next time");
         }
 
 
+        Console.WriteLine("\n\nAnd just to confirm...");
+        bool confirm_match = false;
+
+        foreach (int num in chosen_numbers)
+        {
+            int index = BinarySearch(random_numbers, num, 0, random_numbers.Length - 1);
+            if (index != -1)
+            {
+                Console.WriteLine($"{num} is a winner! You DEFINITELY win the prize!");
+                confirm_match = true;
+            }
+        }
+
+        if (!confirm_match)
+        {
+            Console.WriteLine("TRULY Unlucky mate. Better luck next time");
+        }
+    }
 
     static int LinearSearch(int[] array, int value)
     {
@@ -76,9 +94,21 @@ class Lottery
         return -1;
     }
 
+    static int BinarySearch(int[] array, int value, int low, int high)
+    {
+        if (high >= low)
+        {
+            int mid = (high + low) / 2;
 
-        
+            if (array[mid] == value) return mid;
 
+            if (array[mid] > value) return BinarySearch(array, value, low, mid - 1);
+
+            return BinarySearch(array, value, mid + 1, high);
+
+
+        }
+        return -1;
 
     }
 }
