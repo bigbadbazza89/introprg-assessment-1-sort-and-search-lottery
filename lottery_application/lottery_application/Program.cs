@@ -12,7 +12,7 @@ class Lottery
         Console.WriteLine("Welcome to Big Bad Bazzas Lottery Bonanza!");
         Console.WriteLine("Please submit 5 numbers between 1 and 99");
 
-        // This loop will continue until the player has entered 5 valid numbers
+        // This loop will continue until the player has entered the integer value amount for chosen_numbers as valid numbers
         while (count < 5)
         {
             Console.Write($"Enter number {count + 1}: ");
@@ -44,6 +44,8 @@ class Lottery
                 Console.WriteLine("Invalid input. Please enter a number between 1 and 99.");
             }
         }
+
+        // Generates 5 random winning numbers between 1 and 99
         Random rnd = new Random();
         int[] random_numbers = new int[5];
 
@@ -55,12 +57,14 @@ class Lottery
         Array.Sort(random_numbers);
         Array.Sort(chosen_numbers);
 
+        // Displays the chosen numbers
         Console.WriteLine("\n\n...And here are the winning numbers: ");
         foreach (int num in random_numbers)
         {
             Console.Write(num + " ");
         }
 
+        // Checks to see if the player has any matches using linear search
         Console.WriteLine("\n\nChecking to see if you have any matches...");
         bool found_match = false;
 
@@ -79,7 +83,7 @@ class Lottery
             Console.WriteLine("Unlucky mate. Better luck next time");
         }
 
-
+        // Checks to see if the player has any matches using binary search
         Console.WriteLine("\n\nAnd just to confirm...");
         bool confirm_match = false;
 
@@ -99,6 +103,7 @@ class Lottery
         }
     }
 
+    // Linear search method to find a value in an array
     static int LinearSearch(int[] array, int value)
     {
         for (int i = 0; i < array.Length; i++)
@@ -110,7 +115,7 @@ class Lottery
         }
         return -1;
     }
-
+    // Binary search method to find a value in a sorted array
     static int BinarySearch(int[] array, int value, int low, int high)
     {
         if (high >= low)
