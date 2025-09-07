@@ -28,21 +28,57 @@ class Lottery
             }
         }
         Random rnd = new Random();
-        int[] randomNumber = new int[5];
+        int[] random_numbers = new int[5];
 
         for (int i = 0; i < 5; i++)
         {
-            randomNumber[i] = rnd.Next(1, 99);
+            random_numbers[i] = rnd.Next(1, 99);
         }
         
-        Array.Sort(randomNumber);
+        Array.Sort(random_numbers);
         Array.Sort(chosen_numbers);
 
-        Console.WriteLine("...And here are the winning numbers: ");
-        foreach (int num in randomNumber)
+        Console.WriteLine("\n\n...And here are the winning numbers: ");
+        foreach (int num in random_numbers)
         {
             Console.Write(num + " ");
         }
+
+        Console.WriteLine("\n\nChecking to see if you have any matches...");
+        bool found_match = false;
+
+        foreach (int num in chosen_numbers)
+        {
+            int index = LinearSearch(random_numbers, num);
+            if (index != -1)
+            {
+                Console.WriteLine($"{num} is a winner! You win the prize!");
+                found_match = true;
+            }
+
+            if (!found_match)
+            {
+                Console.WriteLine("Unlucky mate. Better luck next time");
+            }
+        }
+
+
+
+    static int LinearSearch(int[] array, int value)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] == value)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
+        
+
 
     }
 }
