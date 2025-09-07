@@ -3,18 +3,20 @@
 class Lottery
 {
     static void Main()
-    // This is the array to hold a random number of chosen integers between 1 and 10 by the player
+    // These are the constraints to generate the array to hold a random number of chosen integers by the player
     {   
         Random rnd = new Random();
         int rangeMin = rnd.Next(1, 50);
         int rangeMax = rnd.Next(rangeMin + 1, 100);
-        int size = rnd.Next(1, 11);
+        int rangeSize = rangeMax - rangeMin + 1;
+        int maxSize = Math.Min(rangeSize, 9); 
+        int size = rnd.Next(1, maxSize + 1);
         int[] chosen_numbers = new int[size];
         int count = 0;
 
         // Welcomes and asks for the lotto numbers from the player
         Console.WriteLine("Welcome to Big Bad Bazzas Lottery Bonanza!");
-        Console.WriteLine($"Please submit {size} numbers between {rangeMin} and {rangeMax}");
+        Console.WriteLine($"\n\nPlease submit {size} numbers between {rangeMin} and {rangeMax}.");
 
         // This loop will continue until the player has entered the integer value amount for chosen_numbers as valid numbers
         while (count < size)
