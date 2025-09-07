@@ -19,8 +19,25 @@ class Lottery
             string userInput = Console.ReadLine();
             if (int.TryParse(userInput, out int number) && number >= 1 && number <= 99)
             {
-                chosen_numbers[count] = number;
-                count++;
+                bool alreadyChosen = false;
+                for (int i = 0; i < count; i++)
+                {
+                    if (chosen_numbers[i] == number)
+                    {
+                        alreadyChosen = true;
+                        break;
+                    }
+                }
+
+                if (alreadyChosen)
+                {
+                    Console.WriteLine("You've already chosen that number. Pick a different one.");
+                }
+                else
+                {
+                    chosen_numbers[count] = number;
+                    count++;
+                }
             }
             else
             {
