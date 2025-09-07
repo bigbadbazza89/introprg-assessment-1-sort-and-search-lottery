@@ -3,17 +3,19 @@
 class Lottery
 {
     static void Main()
-    // This is the array to hold 5 chosen integers by the player
-    {
-        int[] chosen_numbers = new int[5];
+    // This is the array to hold  a random number of chosen integers between 1 and 10 by the player
+    {   
+        Random rnd = new Random();
+        int size = rnd.Next(1, 11);
+        int[] chosen_numbers = new int[size];
         int count = 0;
 
         // Welcomes and asks for the lotto numbers from the player
         Console.WriteLine("Welcome to Big Bad Bazzas Lottery Bonanza!");
-        Console.WriteLine("Please submit 5 numbers between 1 and 99");
+        Console.WriteLine($"Please submit {size} numbers between 1 and 99");
 
         // This loop will continue until the player has entered the integer value amount for chosen_numbers as valid numbers
-        while (count < 5)
+        while (count < size)
         {
             Console.Write($"Enter number {count + 1}: ");
             string userInput = Console.ReadLine();
@@ -45,11 +47,10 @@ class Lottery
             }
         }
 
-        // Generates 5 random winning numbers between 1 and 99
-        Random rnd = new Random();
-        int[] random_numbers = new int[5];
+        // Generates random winning numbers between 1 and 99
+        int[] random_numbers = new int[size];
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < size; i++)
         {
             random_numbers[i] = rnd.Next(1, 99);
         }
