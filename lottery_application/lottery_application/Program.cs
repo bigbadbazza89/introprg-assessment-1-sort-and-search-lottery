@@ -27,5 +27,19 @@ class Lottery
                 Console.WriteLine("Invalid input. Please enter a number between 1 and 99.");
             }
         }
+        Random rnd = new Random();
+        int[] randomNumber = new int[5];
+
+        for (int i = 0; i < 5; i++)
+        {
+            randomNumber[i] = rnd.Next(1, 99);
+        }
+        
+        Console.WriteLine("...And here are the winning numbers: ");
+        foreach (int num in randomNumber)
+        {
+            Console.Write(num + " ");
+        }
+
     }
 }
