@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Barrie\\source\\repos\\introprg-assessment-1-sort-and-search-lottery\\lottery_application\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A4D88807-0C21-4B55-B4A4-CBA020B06707}|lottery_application\\lottery_application.csproj|c:\\users\\barrie\\source\\repos\\introprg-assessment-1-sort-and-search-lottery\\lottery_application\\lottery_application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4D88807-0C21-4B55-B4A4-CBA020B06707}|lottery_application\\lottery_application.csproj|solutionrelative:lottery_application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Barrie\\source\\repos\\introprg-assessment-1-sort-and-search-lottery\\lottery_application\\lottery_application\\Program.cs",
+              "RelativeDocumentMoniker": "lottery_application\\Program.cs",
+              "ToolTip": "C:\\Users\\Barrie\\source\\repos\\introprg-assessment-1-sort-and-search-lottery\\lottery_application\\lottery_application\\Program.cs",
+              "RelativeToolTip": "lottery_application\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T10:39:49.84Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

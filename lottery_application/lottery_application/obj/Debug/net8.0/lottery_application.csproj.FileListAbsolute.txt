@@ -1,0 +1,15 @@
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\bin\Debug\net8.0\lottery_application.exe
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\bin\Debug\net8.0\lottery_application.deps.json
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\bin\Debug\net8.0\lottery_application.runtimeconfig.json
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\bin\Debug\net8.0\lottery_application.dll
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\bin\Debug\net8.0\lottery_application.pdb
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\obj\Debug\net8.0\lottery_application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\obj\Debug\net8.0\lottery_application.AssemblyInfoInputs.cache
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\obj\Debug\net8.0\lottery_application.AssemblyInfo.cs
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\obj\Debug\net8.0\lottery_application.csproj.CoreCompileInputs.cache
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\obj\Debug\net8.0\lottery_application.sourcelink.json
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\obj\Debug\net8.0\lottery_application.dll
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\obj\Debug\net8.0\refint\lottery_application.dll
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\obj\Debug\net8.0\lottery_application.pdb
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\obj\Debug\net8.0\lottery_application.genruntimeconfig.cache
+C:\Users\Barrie\source\repos\introprg-assessment-1-sort-and-search-lottery\lottery_application\lottery_application\obj\Debug\net8.0\ref\lottery_application.dll
