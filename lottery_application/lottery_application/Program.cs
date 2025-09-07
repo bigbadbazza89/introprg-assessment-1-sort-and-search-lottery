@@ -31,7 +31,7 @@ class Lottery
 
                 if (alreadyChosen)
                 {
-                    Console.WriteLine("You've already chosen that number. Pick a different one.");
+                    Console.WriteLine("Number already chosen, please choose another.");
                 }
                 else
                 {
